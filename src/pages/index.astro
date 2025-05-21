@@ -1,0 +1,244 @@
+---
+import PageLayout from '../layouts/BaseLayout.astro'
+import Section from '../components/Section.astro'
+import Card from '../components/Card.astro'
+import Label from '../components/Label.astro'
+import SkillLayout from '../components/SkillLayout.astro'
+
+import { Image } from 'astro:assets'
+import headshot from '../assets/headshot.jpg'
+import ProjectCard from '@/components/ProjectCard.astro'
+
+const languages = ['JavaScript', 'TypeScript', 'Python', 'Go']
+const webTechnologies = [
+	'React',
+	'Next.js',
+	'Svelte',
+	'Astro',
+	'Node.js',
+	'Express.js',
+	'FastAPI',
+	'TailwindCSS'
+]
+const toolsAndDbs = [
+	'PostgreSQL',
+	'MongoDB',
+	'Firebase',
+	'Webpack',
+	'REST',
+	'GraphQL',
+	'Git',
+	'VS Code'
+]
+const itTechnologies = [
+	'Azure Virtual Machines',
+	'Active Directory',
+	'PowerShell',
+	'Bash',
+	'Network Security Groups',
+	'Docker',
+	'AWS'
+]
+---
+
+<PageLayout meta={{ title: 'Home' }}>
+	<div class='flex flex-col w-full gap-y-10'>
+		<section class='flex flex-col items-center gap-y-7'>
+			<Image
+				src={headshot}
+				alt='profile photo'
+				class='h-28 w-auto rounded-full bg-[#1a1a1a] p-[2px]'
+				loading='eager'
+			/>
+
+			<div class='flex flex-col items-center gap-y-4'>
+				<h1 class='text-3xl font-bold'>Tyrone Cloma</h1>
+				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
+					<Label title='IT Professional & Software Engineer'>
+						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='w-5 h-5' slot='icon'
+							><path
+								fill='currentColor'
+								d='M4.615 20q-.69 0-1.152-.462Q3 19.075 3 18.385v-9.77q0-.69.463-1.152Q3.925 7 4.615 7H9V5.615q0-.69.463-1.152Q9.925 4 10.615 4h2.77q.69 0 1.153.463q.462.462.462 1.152V7h4.385q.69 0 1.152.463q.463.462.463 1.152v9.77q0 .69-.462 1.152q-.463.463-1.153.463zm0-1h14.77q.23 0 .423-.192q.192-.193.192-.423v-9.77q0-.23-.192-.423Q19.615 8 19.385 8H4.615q-.23 0-.423.192Q4 8.385 4 8.615v9.77q0 .23.192.423q.193.192.423.192M10 7h4V5.615q0-.23-.192-.423Q13.615 5 13.385 5h-2.77q-.23 0-.423.192q-.192.193-.192.423zM4 19V8z'
+							></path></svg
+						>
+					</Label>
+					<Label title='New York City, NY'>
+						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='w-5 h-5' slot='icon'
+							><path
+								fill='currentColor'
+								d='M12.003 11.73q.668 0 1.14-.475q.472-.475.472-1.143t-.475-1.14q-.476-.472-1.143-.472t-1.14.476q-.472.475-.472 1.143t.475 1.14q.476.472 1.143.472M12 19.677q2.82-2.454 4.458-4.991q1.638-2.538 1.638-4.39q0-2.744-1.737-4.53T12 3.981q-2.621 0-4.359 1.785t-1.737 4.53q0 1.852 1.638 4.39q1.639 2.537 4.458 4.99m0 1.343q-3.525-3.117-5.31-5.814q-1.786-2.697-1.786-4.909q0-3.173 2.066-5.234Q9.037 3 12 3t5.03 2.062q2.066 2.061 2.066 5.234q0 2.212-1.785 4.909q-1.786 2.697-5.311 5.814m0-10.904'
+							></path></svg
+						>
+					</Label>
+					<Label
+						title='linkedin.com/in/tyronecloma'
+						as='a'
+						href='https://www.linkedin.com/in/tyronecloma/'
+						target='_blank'
+					>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 16 16'
+							slot='icon'
+							class='w-5 h-5 text-foreground/75'
+							><path
+								fill='currentColor'
+								d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'
+							></path></svg
+						>
+					</Label>
+				</div>
+			</div>
+		</section>
+
+		<Section title='About'>
+			<p class='text-muted-foreground'>
+				Versatile IT Professional and Software Engineer with strong fundamentals in full-stack
+				development and a solid background in IT support and infrastructure. A self-starter with a
+				collaborative mindset, rooted in resourcefulness and driven by a continuous eagerness to
+				learn. Combining hands-on experience in software services with the ability to build and
+				maintain scalable web applications, enabling companies to deliver innovative and reliable
+				solutions to their clients
+			</p>
+		</Section>
+		<Section title='Experience'>
+			<Card
+				heading='Website Development Engineer'
+				subheading='Sacred Goddess Studio'
+				date='Oct 2024 - Present'
+				altText='Website Development Engineer, Sacred Goddess Studio'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Implemented server-side rendering and static site generation with Next.js, boosting SEO
+						performance and driving a 40% growth in organic search traffic within 90 days.
+					</li>
+					<li>
+						Integrated Shopify's Storefront GraphQL API to enable real-time product rendering and
+						checkout functionality, reducing customer drop-off rates by 25%.
+					</li>
+					<li>
+						Streamlined product management workflows by restructuring the product database, reducing
+						inventory update time by 60%, and cutting manual pricing errors by 75%.
+					</li>
+				</ul>
+			</Card>
+			<Card
+				heading='Software Support Specialist'
+				subheading='Sacred Goddess Studio'
+				date='Jan 2024 - Oct 2024'
+				altText='Software Support Specialist, Sacred Goddess Studio'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Handled end-to-end support for all Shopify-related issues, resolving an average of 10-20
+						technical inquiries weekly, and maintaining site uptime above 99.9% through proactive
+						monitoring and fixes.
+					</li>
+					<li>
+						Customized and maintained Shopify themes and Liquid templates to address
+						customer-reported issues and feature requests, leading to a 15% increase in conversion
+						rates over 3 months.
+					</li>
+					<li>
+						Developed internal tools and automated scripts to streamline order processing and
+						support workflows, reducing manual intervention by 50% and saving an estimated 10+ hours
+						per week in operational time.
+					</li>
+				</ul>
+			</Card>
+			<Card
+				heading='IT Support Technician'
+				subheading='Half Price Movers Queens'
+				date='Mar 2023 - Jan 2024'
+				altText='IT Support Technician, Half Price Movers Queens'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Managed Active Directory for a small office, overseeing user setup, password resets, and
+						access permissions to maintain secure and efficient system access across all
+						departments.
+					</li>
+					<li>
+						Diagnosed and resolved local network issues, maintaining over 98% network uptime and
+						improving day-to-day efficiency for team members relying on shared resources and VoIP
+						services.
+					</li>
+					<li>
+						Provisioned and maintained Azure Virtual Machines and configured Virtual Networks and
+						Network Security Groups to support internal operations, and ensured a stable cloud
+						environment for a 10-person team.
+					</li>
+				</ul>
+			</Card>
+		</Section>
+
+		<Section title='Education'>
+			<Card
+				heading='Computer Science'
+				subheading='Ateneo de Manila University'
+				date='Feb 2021'
+				altText='College'
+				imageClass='h-12 w-auto md:-left-16'
+			/>
+		</Section>
+		<Section title='Projects'>
+			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+				<ProjectCard
+					href='https://github.com/tcloma/Hover-Note'
+					heading='Hover Note'
+					subheading='Markdown Sticky notes app for your desktop'
+					imagePath='/src/assets/hover-preview.png'
+					altText='Hover Note'
+					class='w-full sm:w-1/2'
+				/>
+				<ProjectCard
+					href='https://github.com/tcloma/azure-cli-vm-provisioning'
+					heading='Azure CLI Walkthrough'
+					subheading='Provisioning VMs on Microsoft Azure using the Azure CLI'
+					imagePath='/src/assets/azure-preview.png'
+					altText='Azure CLI Walkthrough'
+					class='w-full sm:w-1/2'
+				/>
+			</div>
+		</Section>
+		<Section title='Certifications'>
+			<Card
+				as='a'
+				heading='Full Stack Web Development'
+				subheading='Flatiron School'
+				date='August 2022'
+				altText='Bootcamp'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+			<Card
+				as='a'
+				heading='Course Careers IT Professional'
+				date='May 2025'
+				altText='Bootcamp'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+			<Card
+				as='a'
+				heading='CompTIA A+'
+				date='June 2025 (In progress)'
+				altText='Cert'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+			<Card
+				as='a'
+				heading='CompTIA Network+'
+				date='July 2025 (In Progress)'
+				altText='Cert'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+		</Section>
+
+		<Section title='Skills'>
+			<SkillLayout title='Languages' skills={languages} />
+			<SkillLayout title='Web Technologies' skills={webTechnologies} />
+			<SkillLayout title='Tools and Databases' skills={toolsAndDbs} />
+			<SkillLayout title='IT Technologies' skills={itTechnologies} />
+		</Section>
+	</div>
+</PageLayout>
